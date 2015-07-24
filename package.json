@@ -1,0 +1,17 @@
+{
+    "name": "gulp-base-markup-project",
+    "email": "juicyigor@icloud.com",
+    "description": "template markup project",
+    "private": true,
+    "dependencies": {
+        "coffee-script": "*",
+        "gulp": "*",
+        "gulp-coffee": "*",
+        "gulp-coffeeify": "*",
+        "gulp-less": "*",
+        "gulp-jade": "*",
+        "gulp-connect": "*",
+
+        "jquery": "*"
+    }
+}
