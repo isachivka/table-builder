@@ -1,0 +1,35 @@
+.colorify-trs(@color: #ccc) {
+    tr:nth-child(1) { .colorify(@color: #000); }
+}
+.colorify-tds(@color: #ccc) {
+    td:nth-child(1) {background: lighten(@color, 5%);}
+    td:nth-child(2) {background: lighten(@color, 10%);}
+    td:nth-child(3) {background: lighten(@color, 15%);}
+    td:nth-child(4) {background: lighten(@color, 20%);}
+    td:nth-child(5) {background: lighten(@color, 30%);}
+    td:nth-child(6) {background: lighten(@color, 40%);}
+}
+
+
+table {
+    // height: 500px;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 24px;
+    color: #fff;
+    border: none;
+    font-family: 'Trebuchet MS';
+    td {
+        text-align: center;
+        height: 100px;
+        &[rowspan='1'] { height: 100px; }
+        &[rowspan='2'] { height: 200px; }
+        &[rowspan='3'] { height: 300px; }
+    }
+    tr:nth-child(1) { .colorify-tds(@color: #f00); }
+    tr:nth-child(2) { .colorify-tds(@color: #ff0); }
+    tr:nth-child(3) { .colorify-tds(@color: #0f0); }
+    tr:nth-child(4) { .colorify-tds(@color: #0ff); }
+    tr:nth-child(5) { .colorify-tds(@color: #00f); }
+    tr:nth-child(6) { .colorify-tds(@color: #f0f); }
+}
